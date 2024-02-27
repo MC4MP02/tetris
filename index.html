@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tetris in JavaScript</title>
+    <script type="module" src="/functions.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="gradient"></div>
+    </div>
+    <canvas></canvas>
+    <span>Score: <span id="score">0</span></span>
+  </body>
+</html>
+
+<style>
+  :root {
+    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+    font-weight: 400;
+
+    color-scheme: dark light;
+    color: rgba(255, 255, 255, 0.87);
+    background-color: #242424;
+
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  .container {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    background-color: #2d3748; /* Color correspondiente a bg-slate-950 */
+  }
+
+  .gradient {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    background: linear-gradient(to right, #4f4f4f2e 1px, transparent 1px),
+      linear-gradient(to bottom, #4f4f4f2e 1px, transparent 1px);
+    background-size: 14px 24px;
+    -webkit-mask-image: radial-gradient(
+      ellipse 60% 50% at 50% 0%,
+      #000 70%,
+      transparent 100%
+    );
+    mask-image: radial-gradient(
+      ellipse 60% 50% at 50% 0%,
+      #000 70%,
+      transparent 100%
+    );
+  }
+
+  body {
+    margin: 0;
+    padding: 0;
+    display: grid;
+    place-content: center;
+  }
+  canvas {
+    margin-top: 8vh;
+  }
+  span {
+    font-size: xx-large;
+  }
+</style>
